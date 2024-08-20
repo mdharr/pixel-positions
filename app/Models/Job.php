@@ -8,6 +8,9 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use App\Models\Tag;
 
+/**
+ * @method static where(string $string, string $string1, string $string2)
+ */
 class Job extends Model
 {
     use HasFactory;

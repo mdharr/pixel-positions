@@ -2,12 +2,10 @@
     <div class="space-y-10">
         <section class="text-center pt-6">
             <h1 class="font-bold text-4xl">Let's Find Your Next Job</h1>
-            <form action="" class="mt-6">
-                <div class="relative inline-block w-full max-w-xl">
-                    <input type="text" placeholder="Web Developer" class="rounded-xl bg-white/5 border border-white/10 px-5 py-4 w-full focus:outline-none">
-                    <span class="w-3 h-3 bg-white absolute top-1/2 right-5 transform -translate-y-1/2"></span>
-                </div>
-            </form>
+
+            <x-forms.form action="/search" class="mt-6">
+                <x-forms.input :label="false" name="q" placeholder="Web Developer..."/>
+            </x-forms.form>
         </section>
         <section class="pt-10">
             <x-section-heading>Featured Jobs</x-section-heading>
@@ -21,11 +19,12 @@
 
         <section>
             <x-section-heading>Tags</x-section-heading>
-            <div class="mt-6 space-x-1">
-                @foreach($tags as $tag)
-                    <x-tag :$tag />
-{{--                    <x-tag :tag="$tag"/>--}}
-                @endforeach
+            <div class="mt-6 h-40 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200">
+                <div class="flex flex-wrap gap-1">
+                    @foreach($tags as $tag)
+                        <x-tag :$tag />
+                    @endforeach
+                </div>
             </div>
         </section>
 

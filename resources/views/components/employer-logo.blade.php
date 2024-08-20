@@ -1,3 +1,12 @@
-@props(['width' => 90, 'height' => 90])
-<img src="http://picsum.photos/seed/{{ rand(0, 100000000) }}/{{ $width }}/{{ $height }}" alt="" class="rounded-xl">
+@props(['employer', 'width' => 90, 'height' => 90])
 
+<div
+    class="rounded-xl bg-cover bg-center bg-no-repeat"
+    style="
+        background-image: url('{{ asset($employer->logo) }}');
+        width: {{ $width }}px;
+        height: {{ $height }}px;
+    "
+    role="img"
+    aria-label="{{ $employer->name }} logo"
+></div>

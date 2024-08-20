@@ -18,6 +18,28 @@ export default {
         }
     },
   },
-  plugins: [],
+  plugins: [
+      function({ addUtilities }) {
+          const newUtilities = {
+              '.scrollbar-thin': {
+                  scrollbarWidth: 'thin',
+                  '&::-webkit-scrollbar': {
+                      width: '8px',
+                  },
+              },
+              '.scrollbar-thumb-gray-400': {
+                  '&::-webkit-scrollbar-thumb': {
+                      backgroundColor: '#9ca3af',
+                  },
+              },
+              '.scrollbar-track-gray-200': {
+                  '&::-webkit-scrollbar-track': {
+                      backgroundColor: '#e5e7eb',
+                  },
+              },
+          }
+          addUtilities(newUtilities, ['responsive', 'hover'])
+      }
+  ],
 }
 
