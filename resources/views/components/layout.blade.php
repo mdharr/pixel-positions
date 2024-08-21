@@ -20,7 +20,7 @@
                 </a>
             </div>
             <div class="space-x-6 font-bold">
-                <a href="/jobs">Jobs</a>
+                <a href="/all-jobs">Jobs</a>
 {{--                <a href="/careers">Careers</a>--}}
                 <a href="/salaries">Salaries</a>
                 <a href="/employers">Companies</a>

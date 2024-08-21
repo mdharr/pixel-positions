@@ -35,6 +35,9 @@
                     <x-job-card-wide :$job />
                 @endforeach
             </div>
+            <h3 class="mt-6">
+                <a href="/all-jobs" class="hover:text-blue-500">See All Jobs</a>
+            </h3>
         </section>
     </div>
 </x-layout>
